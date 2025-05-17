@@ -1,5 +1,8 @@
 package org.sopt.sopkathon.domain;
 
+import lombok.Getter;
+
+@Getter
 public enum Region {
     GONGJOO("공주");
 
