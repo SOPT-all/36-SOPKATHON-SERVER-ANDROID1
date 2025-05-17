@@ -40,9 +40,11 @@ public class ProductEntity extends BaseTimeEntity {
     private String seller;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Region region;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Category category;
 
     @Column(nullable = false)
