@@ -27,16 +27,16 @@ public class OrderEntity extends BaseTimeEntity {
     private ProductEntity product;
 
     @Column(nullable = false)
-    private int quentity;
+    private int quantity;
 
     @Column(nullable = false)
     private int orderPrice;
 
     @Builder
-    private OrderEntity(UserEntity user, ProductEntity product, int quentity, int orderPrice) {
+    private OrderEntity(UserEntity user, ProductEntity product, int quantity, int orderPrice) {
         this.user = user;
         this.product = product;
-        this.quentity = quentity;
+        this.quantity = quantity;
         this.orderPrice = orderPrice;
     }
 }

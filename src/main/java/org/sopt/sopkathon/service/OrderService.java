@@ -22,7 +22,7 @@ public class OrderService {
         OrderEntity orderEntity = OrderEntity.builder()
                 .user(user)
                 .product(product)
-                .quentity(quantity)
+                .quantity(quantity)
                 .orderPrice(orderPrice)
                 .build();
 
