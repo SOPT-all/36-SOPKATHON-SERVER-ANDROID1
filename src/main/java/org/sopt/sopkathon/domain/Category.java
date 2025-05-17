@@ -6,7 +6,7 @@ import org.sopt.sopkathon.global.error.exception.BusinessException;
 public enum Category {
     // 채소
     CHILI("고추"),
-    GINSENG("인삼"),
+    WATERMELON("수박"),
     SHIITAKE("표고"),
     GARLIC("마늘"),
 
