@@ -22,6 +22,7 @@ public class UserEntity extends BaseTimeEntity {
     private String name;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Level level;
 
     @Column(nullable = false)
