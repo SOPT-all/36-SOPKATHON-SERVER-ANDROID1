@@ -4,23 +4,23 @@ import lombok.Getter;
 
 @Getter
 public enum Region {    // 시
-    GONGJU("공주시"),
-    ASAN("아산시"),
-    CHEONAN("천안시"),
-    DANGJIN("당진시"),
-    SEOSAN("서산시"),
-    BORYEONG("보령시"),
-    GYERYONG("계룡시"),
-    NONSAN("논산시"),
+    GONGJU("공주"),
+    ASAN("아산"),
+    CHEONAN("천안"),
+    DANGJIN("당진"),
+    SEOSAN("서산"),
+    BORYEONG("보령"),
+    GYERYONG("계룡"),
+    NONSAN("논산"),
 
     // 군
-    TAEAN("태안군"),
-    HONGSEONG("홍성군"),
-    YESAN("예산군"),
-    CHEONGYANG("청양군"),
-    BUYEO("부여군"),
-    SEOCHEON("서천군"),
-    GEUMSAN("금산군");
+    TAEAN("태안"),
+    HONGSEONG("홍성"),
+    YESAN("예산"),
+    CHEONGYANG("청양"),
+    BUYEO("부여"),
+    SEOCHEON("서천"),
+    GEUMSAN("금산");
 
 
     private final String description;

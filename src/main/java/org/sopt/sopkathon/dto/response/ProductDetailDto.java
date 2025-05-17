@@ -7,7 +7,10 @@ public record ProductDetailDto(
         Long id,
         String image,
         String title,
-        String body,
+        String feature,
+        String flavor,
+        String shape,
+        String storage,
         String seller,
         Region region
 ) {
@@ -16,7 +19,10 @@ public record ProductDetailDto(
                 product.getId(),
                 product.getImageUrl(),
                 product.getTitle(),
-                product.getBody(),
+                product.getFeature(),
+                product.getFlavor(),
+                product.getShape(),
+                product.getStorage(),
                 product.getSeller(),
                 product.getRegion()
         );
