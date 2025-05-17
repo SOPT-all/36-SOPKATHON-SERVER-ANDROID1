@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum ResultCode {
 
+    CREATED(HttpStatus.CREATED.value(), HttpStatus.CREATED, "리소스를 생성했습니다."),
     SUCCESS(HttpStatus.OK.value(), HttpStatus.OK, "요청이 성공했습니다.");
 
     private final boolean success;

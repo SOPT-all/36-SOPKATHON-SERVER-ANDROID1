@@ -23,4 +23,13 @@ public class UserService {
 
         return UserInfoDto.from(user);
     }
+
+    public UserEntity getUserById(Long userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(NoSuchUserException::new);
+    }
+
+    public void updateUserTotalPrice(UserEntity user, int totalPrice) {
+        user.setTotalPrice(totalPrice);
+    }
 }
