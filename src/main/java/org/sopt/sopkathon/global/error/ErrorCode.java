@@ -11,6 +11,7 @@ public enum ErrorCode {
      */
     NOT_SUPPORTED_METHOD_ERROR(HttpStatus.METHOD_NOT_ALLOWED.value(), HttpStatus.METHOD_NOT_ALLOWED, "지원하지 않는 HTTP 메서드입니다."),
     NOT_FOUND_ERROR(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND, "지원하지 않는 URL입니다."),
+    NO_SUCH_PRODUCT_ERROR(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND, "존재하지 않는 상품입니다."),
     NOT_VALID_HEADER(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST, "요청 헤더의 값이 잘못된 형식입니다."),
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부 오류 발생");
 
