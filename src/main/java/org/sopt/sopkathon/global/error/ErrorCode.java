@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 public enum ErrorCode {
 
     NO_SUCH_USER_ERROR(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND, "존재하지 않는 유저입니다."),
+    NO_SUCH_CATEGORY_ERROR(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND, "존재하지 않는 카테고리입니다."),
 
     /**
      * 공통 예외
