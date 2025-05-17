@@ -25,6 +25,9 @@ public class ProductEntity extends BaseTimeEntity {
     private String body;
 
     @Column(nullable = false)
+    private String imageUrl;
+
+    @Column(nullable = false)
     private String seller;
 
     @Column(nullable = false)
