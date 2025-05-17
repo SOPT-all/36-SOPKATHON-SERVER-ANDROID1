@@ -28,4 +28,8 @@ public class UserService {
         return userRepository.findById(userId)
                 .orElseThrow(NoSuchUserException::new);
     }
+
+    public void updateUserTotalPrice(UserEntity user, int totalPrice) {
+        user.setTotalPrice(totalPrice);
+    }
 }

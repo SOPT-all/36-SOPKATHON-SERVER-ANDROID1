@@ -1,13 +1,11 @@
 package org.sopt.sopkathon.dto.response;
 
-import org.sopt.sopkathon.domain.OrderEntity;
-
 public record OrderResponseDto(
         Long orderId
 ) {
-    public static OrderResponseDto from(OrderEntity orderEntity) {
+    public static OrderResponseDto of(Long orderId) {
         return new OrderResponseDto(
-                orderEntity.getId()
+                orderId
         );
     }
 }

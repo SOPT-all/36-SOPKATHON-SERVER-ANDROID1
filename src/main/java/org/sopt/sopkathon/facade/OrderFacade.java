@@ -1,10 +1,10 @@
 package org.sopt.sopkathon.facade;
 
 import lombok.RequiredArgsConstructor;
-import org.sopt.sopkathon.domain.OrderEntity;
 import org.sopt.sopkathon.domain.ProductEntity;
 import org.sopt.sopkathon.domain.UserEntity;
 import org.sopt.sopkathon.dto.request.OrderRequestDto;
+import org.sopt.sopkathon.dto.response.CreateOrderDto;
 import org.sopt.sopkathon.dto.response.OrderResponseDto;
 import org.sopt.sopkathon.service.OrderService;
 import org.sopt.sopkathon.service.ProductService;
@@ -23,7 +23,8 @@ public class OrderFacade {
     public OrderResponseDto createOrder(OrderRequestDto dto) {
         ProductEntity product = productService.getProduct(dto.productId());
         UserEntity user = userService.getUserById(dto.userId());
-        OrderEntity order = orderService.createOrder(user, product, dto.quantity());
-        return OrderResponseDto.from(order);
+        CreateOrderDto order = orderService.createOrder(user, product, dto.quantity());
+        userService.updateUserTotalPrice(user, order.totalPrice());
+        return OrderResponseDto.of(order.orderId());
     }
 }

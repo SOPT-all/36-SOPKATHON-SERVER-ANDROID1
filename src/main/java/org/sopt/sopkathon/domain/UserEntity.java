@@ -26,12 +26,28 @@ public class UserEntity extends BaseTimeEntity {
     private Level level;
 
     @Column(nullable = false)
-    private int totalPrice;
+    private Integer totalPrice;
 
     @Builder
     private UserEntity(String name, Level level, int totalPrice) {
         this.name = name;
         this.level = level;
         this.totalPrice = totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public void updateLevelByTotalPrice(int totalPrice) {
+        if (totalPrice >= 500_000) {
+            this.level = Level.PRINCESS;
+        } else if (totalPrice >= 300_000) {
+            this.level = Level.NOBILITY;
+        } else if (totalPrice >= 100_000) {
+            this.level = Level.COMMONS;
+        } else {
+            this.level = Level.NOVI;
+        }
     }
 }
