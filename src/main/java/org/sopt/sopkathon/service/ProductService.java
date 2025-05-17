@@ -22,4 +22,10 @@ public class ProductService {
         return ProductDetailDto.of(product);
     }
 
+    @Transactional(readOnly = true)
+    public ProductEntity getProduct(Long productId) {
+        return productRepository.findById(productId)
+                .orElseThrow(() -> new BusinessException(ErrorCode.NO_SUCH_PRODUCT_ERROR));
+    }
+
 }
