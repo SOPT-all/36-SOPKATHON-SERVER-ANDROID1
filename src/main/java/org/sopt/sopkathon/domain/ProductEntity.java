@@ -40,10 +40,11 @@ public class ProductEntity extends BaseTimeEntity {
     private int price;
 
     @Builder
-    private ProductEntity(String title, String body, String seller, Region region, Category category, int price) {
+    private ProductEntity(String title, String body, String imageUrl, String seller, Region region, Category category, int price) {
         this.title = title;
         this.body = body;
         this.seller = seller;
+        this.imageUrl = imageUrl;
         this.region = region;
         this.category = category;
         this.price = price;
