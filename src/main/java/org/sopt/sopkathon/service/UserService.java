@@ -8,9 +8,6 @@ import org.sopt.sopkathon.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.NoSuchElementException;
-import java.util.Optional;
-
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -19,7 +16,7 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    public UserInfoDto getUserInfo(Long userId){
+    public UserInfoDto getUserInfo(Long userId) {
 
         UserEntity user = userRepository.findById(userId)
                 .orElseThrow(NoSuchUserException::new);
