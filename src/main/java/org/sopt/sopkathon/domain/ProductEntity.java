@@ -22,7 +22,16 @@ public class ProductEntity extends BaseTimeEntity {
     private String title;
 
     @Column(nullable = false)
-    private String body;
+    private String feature;
+
+    @Column(nullable = false)
+    private String flavor;
+
+    @Column(nullable = false)
+    private String shape;
+
+    @Column(nullable = false)
+    private String storage;
 
     @Column(nullable = false)
     private String imageUrl;
@@ -40,9 +49,12 @@ public class ProductEntity extends BaseTimeEntity {
     private int price;
 
     @Builder
-    private ProductEntity(String title, String body, String imageUrl, String seller, Region region, Category category, int price) {
+    private ProductEntity(String title, String feature, String flavor, String shape, String storage, String imageUrl, String seller, Region region, Category category, int price) {
         this.title = title;
-        this.body = body;
+        this.feature = feature;
+        this.flavor = flavor;
+        this.shape = shape;
+        this.storage = storage;
         this.seller = seller;
         this.imageUrl = imageUrl;
         this.region = region;
