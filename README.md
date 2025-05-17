@@ -17,7 +17,7 @@
 
 ## 🏗️ Architecture Overview
 
-
+![image](https://github.com/user-attachments/assets/c14db41c-9f35-41dc-9df7-eabc07a403e9)
 
 </br>
 
